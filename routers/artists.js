@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
             res.send(arr);
         } else {
             res.render('../views/index.ejs', {
-                artists: allArtist //the key becomes a var inside the tempelate
+                artists: allArtist //the key becomes a var inside the tempelated
             }); 
         }
     }); 
