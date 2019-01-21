@@ -9,7 +9,15 @@ const Artist = require('../models/artist');
 //index 
 
 router.get('/', (req, res) => {
-
+    Artist.find({}, (err, allArtist) => {
+        if(err) {
+            res.send(arr);
+        } else {
+            res.render('../views/index.ejs', {
+                artists: allArtist //the key becomes a var inside the tempelate
+            }); 
+        }
+    }); 
 })
 
 //new
