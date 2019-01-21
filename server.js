@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override'); 
 
 //middleware
+app.use(bodyParser.urlencoded({extended: true})); 
+app.use(methodOverride('_method')); 
+app.use(express.static('public')); 
 
 //routers 
 
