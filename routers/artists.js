@@ -60,7 +60,13 @@ router.get('/:id', (req, res) => {
 //delete
 
 router.delete('/:id', (req, res) => {
-
+    Artist.findOneAndRemove(req.params.id, (err, deletedArtist) => {
+        if(err) {
+            res.send(err); 
+        } else {
+            res.redirect('/artists'); 
+        }
+    })
 }); 
 
 module.exports = router; 
