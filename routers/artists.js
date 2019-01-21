@@ -55,7 +55,14 @@ router.get('/:id/edit', (req, res) => {
 //update
 
 router.put('/:id', (req, res) => {
-
+    Artist.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateArtist) => {
+        if(err) {
+            res.send(err); 
+        } else {
+            console.log(updateArtist); 
+            res.redirect('/artists'); 
+        }
+    })
 }); 
 
 //show
