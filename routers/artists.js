@@ -21,7 +21,14 @@ router.get('/new', (req, res) => {
 //create
 
 router.post('/', (req, res) => {
-
+    Artist.create(req.body, (err, newArtist) => {
+        if(err) {
+            res.send(err); 
+        } else {
+            console.log(newArtist); 
+            res.redirect('/artists'); 
+        }
+    }); 
 }); 
 
 //edit 
