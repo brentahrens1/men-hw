@@ -4,7 +4,7 @@
 <h1>This is the index page</h1>
 <ul>
     <% artists.forEach(function(eachArtist) { %>
-        <li><%= eachArtist.name %>, <%= eachArtist.team %>, <%= eachArtist.championships %></li>
+        <li><a href="/artists/<%= eachArtist._id %>"><%= eachArtist.name %></a>, <%= eachArtist.team %>, <%= eachArtist.championships %></li>
 
   <%  }) %>
 
