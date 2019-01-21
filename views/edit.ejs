@@ -1,0 +1,19 @@
+<%- include('./partials/header') %>
+<main>
+<h1>This is the edit page</h1>
+
+<form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
+    name:<input type="text" name="name" value="<%= artist.name %>"><br>
+    team:<input type="text" name="team" value="<%= artist.team %>"><br>
+    championships:<input type="number" name="championships" value="<%= artist.championships %>" min="0">
+    <button type="submit">Edit player</button>
+</form>
+
+<a href="/artists">Home</a>
+
+
+</main>
+
+
+
+<%- include('./partials/footer') %>
