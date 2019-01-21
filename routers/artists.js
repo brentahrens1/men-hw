@@ -42,7 +42,14 @@ router.post('/', (req, res) => {
 //edit 
 
 router.get('/:id/edit', (req, res) => {
-
+    Artist.findById(req.params.id, (err, editedArtist) => {
+        if(err) {
+            res.send(err); 
+        } else {
+            res.render('../views/edit.ejs', 
+            {artist: editedArtist}); 
+        }
+    })
 }); 
 
 //update
