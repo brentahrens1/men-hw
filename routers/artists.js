@@ -2,8 +2,9 @@
 const express = require('express'); 
 const router = express.Router(); 
 
-
 //model data 
+
+const Artist = require('../models/artist'); 
 
 //index 
 
