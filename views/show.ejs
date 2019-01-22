@@ -1,19 +1,20 @@
 <%- include('./partials/header') %>
 
 <main>
+<div class="flexit">
 <h1>This is the show page</h1>
     <%= artist.name %><br>
     <%= artist.team %><br>
     <%= artist.championships %><br>
 
-    <a href="/artists/<%= artist._id %>/edit">edit</a>
+    <a class="editBtn" href="/artists/<%= artist._id %>/edit">edit</a>
 
     <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST">
     <button type="submit">Delete player</button>
 </form>
 
 </main>
-
+</div>
 
 
 <%- include('./partials/footer') %> 

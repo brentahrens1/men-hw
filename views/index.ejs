@@ -1,17 +1,19 @@
 <%- include('./partials/header') %>
 
 <main>
-<h1>This is the index page</h1>
+<div class="flexit">
+<h1>Create your player!</h1>
 <ul>
     <% artists.forEach(function(eachArtist) { %>
-        <li><a href="/artists/<%= eachArtist._id %>"><%= eachArtist.name %></a>, <%= eachArtist.team %>, <%= eachArtist.championships %></li>
+        <li class="bottom"><a href="/artists/<%= eachArtist._id %>">Name: <%= eachArtist.name %></a>, Team: <%= eachArtist.team %>,Rings:  <%= eachArtist.championships %></li>
 
   <%  }) %>
 
 
 </ul>
 
-<a href="/artists/new">New Artist</a>
+<a class="indie" href="/artists/new">New Player</a>
+</div>
 
 </main>
 
